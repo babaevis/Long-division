@@ -1,5 +1,5 @@
 # Long-division
-Studying Java
+Studying Java.
 Due to the fact that algorithm was pretty dificult, the code's cleanliness suffered :)
 
 
