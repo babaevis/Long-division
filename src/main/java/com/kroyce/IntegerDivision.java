@@ -18,7 +18,8 @@ public class IntegerDivision {
         }
 
         StringBuilder result = new StringBuilder(getFirstThreeLines(dividend,divisor));
-        result.append(getResultString(getNumbersToDisplay(dividend,divisor), dividend));
+        List<Integer> numbersToDisplay = getNumbersToDisplay(dividend,divisor);
+        result.append(getResultString(numbersToDisplay, dividend));
 
         return result.toString();
     }
