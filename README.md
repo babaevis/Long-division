@@ -1,5 +1,4 @@
 # Long-division
-Studying Java.
 Due to the fact that algorithm was pretty difficult, the code's cleanliness suffered :)
 
 
