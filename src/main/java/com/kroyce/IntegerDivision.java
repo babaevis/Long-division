@@ -18,7 +18,9 @@ public class IntegerDivision {
         }
 
         StringBuilder result = new StringBuilder(getFirstThreeLines(dividend,divisor));
+
         List<Integer> numbersToDisplay = getNumbersToDisplay(dividend,divisor);
+
         result.append(getResultString(numbersToDisplay, dividend));
 
         return result.toString();
@@ -47,19 +49,24 @@ public class IntegerDivision {
                     digitPosition++;
                 }
 
-                result.append(cloneCharacter(' ',spaces-1)).append(cloneCharacter('_', 1)).append(list.get(i)).append('\n');
+                result.append(cloneCharacter(' ',spaces-1)).append("_");
+                result.append(list.get(i)).append('\n');
 
             }else{
                 if(countDigits(list.get(i)) < countDigits(list.get(i-1))){
                     flag = 1;
                 }
 
-                result.append(cloneCharacter(' ', spaces+flag)).append(list.get(i)).append('\n');
-                result.append(cloneCharacter(' ',spaces+flag)).append(cloneCharacter('-',countDigits(list.get(i)))).append('\n');
+                result.append(cloneCharacter(' ', spaces+flag));
+                result.append(list.get(i)).append('\n');
+                result.append(cloneCharacter(' ',spaces+flag));
+                result.append(cloneCharacter('-',countDigits(list.get(i)))).append('\n');
                 flag = 0;
             }
         }
-        result.append(cloneCharacter(' ', countDigits(dividend) - countDigits(list.get(list.size()-1))+1)).append(list.get(list.size()-1)).append('\n');
+
+        result.append(cloneCharacter(' ', countDigits(dividend) - countDigits(list.get(list.size()-1)) + 1));
+        result.append(list.get(list.size()-1)).append('\n');
 
         return result.toString();
     }
